@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+    <style>
+        @media screen and (max-width: 800px) {
+            #label1 {
+                display: none;
+            }
+            
+        }
+        .stylingforlabelandinput {
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Form</h1>
+    <hr />
+    <div>
+      <h3>HTML Input types</h3>
+      <form action="/submit" method="post">
+        <label for="text-input">Text:</label>
+        <input type="text" id="text-input" name="text" />
+
+        <br />
+
+        <label for="password-input">Password:</label>
+        <input type="password" id="password-input" name="password" />
+
+        <br />
+
+        <label for="email-input">Email:</label>
+        <input type="email" id="email-input" name="email" />
+
+        <br />
+
+        <label for="number-input">Number:</label>
+        <input type="number" id="number-input" name="number" />
+
+        <br />
+
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input" name="date" />
+
+        <br />
+
+        <label for="time-input">Time:</label>
+        <input type="time" id="time-input" name="time" />
+
+        <br />
+
+        <label for="tel-input">Telephone:</label>
+        <input type="tel" id="tel-input" name="tel" />
+
+        <br />
+
+        <label for="search-input">Search:</label>
+        <input type="search" id="search-input" name="search" />
+
+        <br />
+
+        <label for="url-input">URL:</label>
+        <input type="url" id="url-input" name="url" />
+
+        <br />
+
+        <label for="range-input">Range:</label>
+        <input
+          type="range"
+          id="range-input"
+          name="range"
+          min="0"
+          max="100"
+          step="1"
+        />
+
+        <br />
+
+        <label for="color-input">Color:</label>
+        <input type="color" id="color-input" name="color" />
+
+        <br />
+
+        <label for="checkbox-input">Checkbox:</label>
+        <input type="checkbox" id="checkbox-input" name="checkbox" />
+
+        <br />
+
+        <label for="radio-input1">Radio 1:</label>
+        <input type="radio" id="radio-input1" name="radio" value="option1" />
+
+        <label for="radio-input2">Radio 2:</label>
+        <input type="radio" id="radio-input2" name="radio" value="option2" />
+
+        <br />
+
+        <label for="file-input">File:</label>
+        <input type="file" id="file-input" name="file" />
+
+        <br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <hr />
+    <div>
+      <h3>HTML Input Validations</h3>
+      <form action="/submit" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <span class="error" id="username-error"></span>
+
+        <br />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <span class="error" id="password-error"></span>
+
+        <br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error" id="email-error"></span>
+
+        <br />
+        <div style="border: 2px solid black">
+          <p>setting up constrained input</p>
+          <label for="age" id="lab">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="18"
+            max="100"
+            required
+          />
+          <span class="error" id="age-error"></span>
+        </div>
+
+        <div style="border: 2px solid black">
+          <p>step property</p>
+          <label for="deliver">How many do you wish to deliver</label>
+          <input
+            type="number"
+            id="deliver"
+            name="deliver"
+            min="18"
+            max="100"
+            step="2"
+            required
+          />
+          <span class="error" id="deliver-error"></span>
+          <br />
+        </div>
+
+        <div style="border: 2px solid black">
+          <p>step property</p>
+          <label for="deliver">How many do you wish to deliver</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            min="2020-06-27"
+            max="2024-06-27"
+            step="2"
+            required
+          />
+          <span class="error" id="deliver-error"></span>
+          <br />
+        </div>
+
+        <div style="border: 2px solid black">
+          <h3>HTML autofocus INPUT ATTRIBUTE</h3>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" autofocus />
+          <br />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+          <br />
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <hr />
+    <div>
+      <h3>HTML INPUT Dropdown</h3>
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <p>By default 1st option will be selected</p>
+      <br />
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi" selected>Audi</option>
+      </select>
+      <p>By default Audi will be selected</p>
+    </div>
+    <hr />
+    <div>
+        <h3>HTML datalist Dropdown</h3>
+    <label for="location">Where are you?</label>
+    <input type="text" id="location" name="location" list="countries">
+    <datalist id="countries">
+        <option value="USA">
+        <option value="Canada">
+        <option value="United Kingdom">
+        <option value="Australia">
+        <option value="Germany">
+    </datalist>
+    </div>
+    <hr />
+    <div>
+        <h3>HTML Playing with input fields for mobile devices</h3>
+    <label for="name" id="label1">What is your name*?</label>
+    <input type="text" id="name" name="name" placeholder="What is your name*?">
+    <p>For mobile devices the label should be inside placeholder since label takes more length, then set labels display property for none to the size of the mobile</p>
+    <p>Another feature for both mobile device and desktop device is even if you enable label for mobile devices and you clicked on label the text box associated with it will autofocused, but if you dont put 'for' attribute then the textbox associated with it wont be autofocussed.</p>
+    </div>
+    <hr />
+    <h3>CSS for HTML Input types</h3>
+      <form action="/submit" method="post">
+        <label for="text-input" class="stylingforlabelandinput">Text:</label>
+        <input type="text" class="stylingforlabelandinput" id="text-input" name="text" />
+
+        <br />
+
+        <label for="password-input" class="stylingforlabelandinput">Password:</label>
+        <input type="password" class="stylingforlabelandinput" id="password-input" name="password" />
+
+        <br />
+
+        <label for="email-input" class="stylingforlabelandinput">Email:</label>
+        <input type="email" class="stylingforlabelandinput" id="email-input" name="email" />
+
+        <br />
+
+        <label for="number-input" class="stylingforlabelandinput">Number:</label>
+        <input type="number" class="stylingforlabelandinput" id="number-input" name="number" />
+
+        <br />
+
+        <label for="date-input" class="stylingforlabelandinput">Date:</label>
+        <input type="date" class="stylingforlabelandinput" id="date-input" name="date" />
+
+        <br />
+
+        <label for="time-input" class="stylingforlabelandinput">Time:</label>
+        <input type="time" class="stylingforlabelandinput" id="time-input" name="time" />
+
+        <br />
+
+        <label for="tel-input" class="stylingforlabelandinput">Telephone:</label>
+        <input type="tel" class="stylingforlabelandinput" id="tel-input" name="tel" />
+
+        <br />
+
+        <label for="search-input" class="stylingforlabelandinput">Search:</label>
+        <input type="search" class="stylingforlabelandinput" id="search-input" name="search" />
+
+        <br />
+
+        <label for="url-input" class="stylingforlabelandinput">URL:</label>
+        <input type="url" class="stylingforlabelandinput" id="url-input" name="url" />
+
+        <br />
+
+        <label for="range-input" class="stylingforlabelandinput">Range:</label>
+        <input
+          type="range"
+          id="range-input"
+          name="range"
+          min="0"
+          max="100"
+          step="1"
+          class="stylingforlabelandinput"
+        />
+
+        <br />
+
+        <label for="color-input" class="stylingforlabelandinput">Color:</label>
+        <input type="color" class="stylingforlabelandinput" id="color-input" name="color" />
+
+        <br />
+
+        <label for="checkbox-input" class="stylingforlabelandinput">Checkbox:</label>
+        <input type="checkbox" class="stylingforlabelandinput" id="checkbox-input" name="checkbox" />
+
+        <br />
+
+        <label for="radio-input1" class="stylingforlabelandinput">Radio 1:</label>
+        <input type="radio" class="stylingforlabelandinput" id="radio-input1" name="radio" value="option1" />
+
+        <label for="radio-input2" class="stylingforlabelandinput">Radio 2:</label>
+        <input type="radio" class="stylingforlabelandinput" id="radio-input2" name="radio" value="option2" />
+
+        <br />
+
+        <label for="file-input" class="stylingforlabelandinput">File:</label>
+        <input type="file" class="stylingforlabelandinput" id="file-input" name="file" />
+
+        <br />
+
+        <input type="submit" value="Submit" />
+      </form>
+
+  </body>
+</html>
